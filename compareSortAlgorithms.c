@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
-
+#include<string.h>
 int extraMemoryAllocated;
 
 void *Alloc(size_t sz)
