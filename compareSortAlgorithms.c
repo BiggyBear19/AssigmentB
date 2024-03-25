@@ -79,7 +79,8 @@ void merge(int pData[], int l, int m, int r){
     int lengthLeft = m - l + 1;
     int lengthRight = r - m;
 
-    int Left[lengthLeft], Right[lengthRight];
+    int* Left = Alloc(lengthLeft);
+    int* Right = Alloc(lengthRight);
 
 
     for(i = 0; i < lengthLeft; i++)
@@ -113,6 +114,10 @@ void merge(int pData[], int l, int m, int r){
         j++;
         k++;
     }
+
+    DeAlloc(Left);
+    DeAlloc(Right);
+
 }
 
 void mergeSort(int pData[], int l, int r)
